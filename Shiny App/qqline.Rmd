@@ -1,0 +1,34 @@
+---
+title: "qqplots"
+author: "uwstudent_16_412"
+date: "12/08/2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+data(mtcars)
+
+cyl <- mtcars$cyl
+n <- length(cyl)
+
+mean.cyl<- mean(cyl)
+std.cyl <- sd(cyl)
+var.cyl <- var(cyl)
+
+prob <- (1:n)/(n+1)
+normal.quantiles = qnorm(prob, mean(cyl), sd(cyl))
+```
+```{r}
+plot(sort(normal.quantiles), sort(cyl) , xlab = 'Theoretical Quantiles from Normal Distribution', ylab = 'Sample Quqnatiles of MPG', main = 'Normal Quantile-Quantile Plot of Number of Cylinders')
+abline(0,1)
+
+
+qqnorm(cyl,lwd=4,pch=1)
+qqline(cyl)
+```
+

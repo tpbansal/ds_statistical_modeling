@@ -1,0 +1,10 @@
+name: shinyapp
+title:
+username:
+account: tapasvibansal
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 246485
+bundleId: 1124364
+url: https://tapasvibansal.shinyapps.io/shinyapp/
+when: 1512799165.25267
